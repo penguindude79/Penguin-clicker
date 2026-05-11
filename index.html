@@ -3,24 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penguin Clicker</title>
+    <title>Penguin Clicker Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Penguin Clicker</h1>
-    <p>Click the penguin to earn points!</p>
-    <img src="penguin.png" alt="Penguin" id="penguin" style="width:200px; cursor:pointer;">
-    <p>Points: <span id="points">0</span></p>
+    <div class="container">
+        <div class="header">
+            <h1>🐧 Penguin Clicker 🐧</h1>
+        </div>
+        
+        <div class="stats">
+            <div class="stat">
+                <span class="label">Fish Caught:</span>
+                <span class="value" id="score">0</span>
+            </div>
+            <div class="stat">
+                <span class="label">Per Click:</span>
+                <span class="value" id="perClick">1</span>
+            </div>
+            <div class="stat">
+                <span class="label">Per Second:</span>
+                <span class="value" id="perSecond">0</span>
+            </div>
+        </div>
 
-    <script>
-        let points = 0;
-        const penguin = document.getElementById('penguin');
-        const pointsDisplay = document.getElementById('points');
+        <div class="main-content">
+            <div class="game-area">
+                <button class="penguin-button" id="penguinBtn">
+                    <span class="penguin-emoji">🐧</span>
+                </button>
+                <p class="click-text">Click the penguin!</p>
+            </div>
 
-        penguin.addEventListener('click', () => {
-            points++;
-            pointsDisplay.textContent = points;
-        });
-    </script>
+            <div class="shop">
+                <h2>🏪 Upgrade Shop</h2>
+                <div class="upgrades-grid" id="upgradesGrid">
+                    <!-- Upgrades will be generated here -->
+                </div>
+            </div>
+        </div>
 
+        <div class="footer">
+            <button class="reset-btn" id="resetBtn">Reset Game</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
 </body>
 </html>

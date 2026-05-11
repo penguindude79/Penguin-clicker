@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penguin Clicker</title>
+</head>
+<body>
+    <h1>Penguin Clicker</h1>
+    <p>Click the penguin to earn points!</p>
+    <img src="penguin.png" alt="Penguin" id="penguin" style="width:200px; cursor:pointer;">
+    <p>Points: <span id="points">0</span></p>
+
+    <script>
+        let points = 0;
+        const penguin = document.getElementById('penguin');
+        const pointsDisplay = document.getElementById('points');
+
+        penguin.addEventListener('click', () => {
+            points++;
+            pointsDisplay.textContent = points;
+        });
+    </script>
+
+</body>
+</html>
